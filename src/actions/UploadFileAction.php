@@ -5,12 +5,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @see https://github.com/vova07/yii2-imperavi-widget
+ * @see https://github.com/venodon/yii2-imperavi-widget
  */
 
-namespace vova07\imperavi\actions;
+namespace venodon\imperavi\actions;
 
-use vova07\imperavi\Widget;
+use venodon\imperavi\Widget;
 use Yii;
 use yii\base\Action;
 use yii\base\DynamicModel;
@@ -32,7 +32,7 @@ use yii\web\UploadedFile;
  * {
  *     return [
  *         'upload-image' => [
- *             'class' => 'vova07\imperavi\actions\UploadFileAction',
+ *             'class' => 'venodon\imperavi\actions\UploadFileAction',
  *             'url' => 'http://my-site.com/statics/',
  *             'path' => '/var/www/my-site.com/web/statics',
  *             'unique' => true,
@@ -42,7 +42,7 @@ use yii\web\UploadedFile;
  *             ]
  *         ],
  *         'file-upload' => [
- *             'class' => 'vova07\imperavi\actions\UploadFileAction',
+ *             'class' => 'venodon\imperavi\actions\UploadFileAction',
  *             'url' => 'http://my-site.com/statics/',
  *             'path' => '/var/www/my-site.com/web/statics',
  *             'uploadOnlyImage' => false,

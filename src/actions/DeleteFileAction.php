@@ -5,12 +5,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @see https://github.com/vova07/yii2-imperavi-widget
+ * @see https://github.com/venodon/yii2-imperavi-widget
  */
 
-namespace vova07\imperavi\actions;
+namespace venodon\imperavi\actions;
 
-use vova07\imperavi\Widget;
+use venodon\imperavi\Widget;
 use Yii;
 use yii\base\Action;
 use yii\base\InvalidConfigException;
@@ -86,17 +86,17 @@ class DeleteFileAction extends Action
             $fileName = Yii::$app->request->post($this->attribute, null);
 
             if ($fileName === null) {
-                return ['error' => Yii::t('vova07/imperavi', 'ERROR_FILE_IDENTIFIER_MUST_BE_PROVIDED')];
+                return ['error' => Yii::t('venodon/imperavi', 'ERROR_FILE_IDENTIFIER_MUST_BE_PROVIDED')];
             }
 
             $file = $this->path . DIRECTORY_SEPARATOR . $fileName;
 
             if (!file_exists($file)) {
-                return ['error' => Yii::t('vova07/imperavi', 'ERROR_FILE_DOES_NOT_EXIST')];
+                return ['error' => Yii::t('venodon/imperavi', 'ERROR_FILE_DOES_NOT_EXIST')];
             }
 
             if (!unlink($file)) {
-                return ['error' => Yii::t('vova07/imperavi', 'ERROR_CANNOT_REMOVE_FILE')];
+                return ['error' => Yii::t('venodon/imperavi', 'ERROR_CANNOT_REMOVE_FILE')];
             }
 
             return ['url' => $this->url . urlencode($fileName)];

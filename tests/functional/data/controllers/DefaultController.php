@@ -5,23 +5,23 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @see https://github.com/vova07/yii2-imperavi-widget
+ * @see https://github.com/venodon/yii2-imperavi-widget
  */
 
-namespace vova07\imperavi\tests\functional\data\controllers;
+namespace venodon\imperavi\tests\functional\data\controllers;
 
 use org\bovigo\vfs\vfsStream;
-use vova07\imperavi\actions\DeleteFileAction;
-use vova07\imperavi\actions\GetFilesAction;
-use vova07\imperavi\actions\GetImagesAction;
-use vova07\imperavi\actions\UploadFileAction;
-use vova07\imperavi\tests\functional\TestCase;
+use venodon\imperavi\actions\DeleteFileAction;
+use venodon\imperavi\actions\GetFilesAction;
+use venodon\imperavi\actions\GetImagesAction;
+use venodon\imperavi\actions\UploadFileAction;
+use venodon\imperavi\tests\functional\TestCase;
 use yii\web\Controller;
 
 /**
  * @author Vasile Crudu <bazillio07@yandex.ru>
  *
- * @link https://github.com/vova07
+ * @link https://github.com/venodon
  */
 final class DefaultController extends Controller
 {

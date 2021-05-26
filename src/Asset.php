@@ -5,10 +5,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @see https://github.com/vova07/yii2-imperavi-widget
+ * @see https://github.com/venodon/yii2-imperavi-widget
  */
 
-namespace vova07\imperavi;
+namespace venodon\imperavi;
 
 use yii\web\AssetBundle;
 
@@ -17,14 +17,14 @@ use yii\web\AssetBundle;
  *
  * @author Vasile Crudu <bazillio07@yandex.ru>
  *
- * @link https://github.com/vova07/yii2-imperavi-widget
+ * @link https://github.com/venodon/yii2-imperavi-widget
  */
 class Asset extends AssetBundle
 {
     /**
      * @inheritdoc
      */
-    public $sourcePath = '@vova07/imperavi/assets';
+    public $sourcePath = '@venodon/imperavi/assets';
 
     /**
      * @inheritdoc

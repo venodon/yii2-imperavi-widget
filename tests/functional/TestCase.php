@@ -5,10 +5,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @see https://github.com/vova07/yii2-imperavi-widget
+ * @see https://github.com/venodon/yii2-imperavi-widget
  */
 
-namespace vova07\imperavi\tests\functional;
+namespace venodon\imperavi\tests\functional;
 
 use org\bovigo\vfs\vfsStream;
 use PHPUnit_Framework_TestCase;
@@ -125,7 +125,7 @@ abstract class TestCase extends PHPUnit_Framework_TestCase
             'id' => 'testapp',
             'basePath' => __DIR__,
             'vendorPath' => $this->getVendorPath(),
-            'controllerNamespace' => 'vova07\imperavi\tests\functional\data\controllers',
+            'controllerNamespace' => 'venodon\imperavi\tests\functional\data\controllers',
             'components' => [
                 'request' => [
                     'cookieValidationKey' => 'wefJDF8sfdsfSDefwqdxj9oq',
@@ -133,7 +133,7 @@ abstract class TestCase extends PHPUnit_Framework_TestCase
                     'scriptUrl' => '/index.php',
                 ],
                 'assetManager' => [
-                    'basePath' => '@vova07/imperavi/tests/data/assets',
+                    'basePath' => '@venodon/imperavi/tests/data/assets',
                     'baseUrl' => '/',
                 ],
                 'i18n' => [
@@ -172,7 +172,7 @@ abstract class TestCase extends PHPUnit_Framework_TestCase
     {
         $view = new View();
         $view->setAssetManager(new AssetManager([
-            'basePath' => '@vova07/imperavi/tests/data/assets',
+            'basePath' => '@venodon/imperavi/tests/data/assets',
             'baseUrl' => '/',
         ]));
 

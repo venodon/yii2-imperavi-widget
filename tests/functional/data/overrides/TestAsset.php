@@ -5,22 +5,22 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @see https://github.com/vova07/yii2-imperavi-widget
+ * @see https://github.com/venodon/yii2-imperavi-widget
  */
 
 namespace vova07\imperavi\tests\functional\data\overrides;
 
-use vova07\imperavi\Asset;
+use venodon\imperavi\Asset;
 
 /**
  * @author Vasile Crudu <bazillio07@yandex.ru>
  *
- * @link https://github.com/vova07
+ * @link https://github.com/venodon
  */
 final class TestAsset extends Asset
 {
     /**
      * @inheritdoc
      */
-    public $sourcePath = '@vova07/imperavi/tests/../../src/assets';
+    public $sourcePath = '@venodon/imperavi/tests/../../src/assets';
 }
