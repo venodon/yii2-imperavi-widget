@@ -3542,8 +3542,11 @@
 					{
 						var text = $('#redactor-filename').val();
 						if (typeof text == 'undefined' || text === '') text = json.filename;
-
-						link = '<a href="' + json.filelink + '" id="filelink-marker">' + text + '</a>';
+						if(this.opts.mediaExtensions.indexOf(json.ext) !== -1) {
+							link = '<video controls="controls"><source type="video/mp4" src="'+$target.attr('rel')+'"><a href="'+$target.attr('rel')+'">'+$target.attr('title')+'</a></video>';
+						}else {
+							link = '<a href="' + json.filelink + '" id="filelink-marker">' + text + '</a>';
+						}
 					}
 
 					if (direct)

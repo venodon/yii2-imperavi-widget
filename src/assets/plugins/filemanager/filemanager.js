@@ -54,9 +54,8 @@
 				e.preventDefault();
 
 				var $target = $(e.target).closest('.redactor-file-manager-link');
-				var videoExtensions = ["mp4", "mpv", "avi"];
-				if(videoExtensions.indexOf($target.attr('data-ext')) !== -1) {
-					this.file.insert('<video poster="" controls="controls"><source type="video/mp4" src="'+$target.attr('rel')+'"><a href="'+$target.attr('rel')+'">'+$target.attr('title')+'</a></video>');
+				if(this.opts.mediaExtensions.indexOf($target.attr('data-ext')) !== -1) {
+					this.file.insert('<video controls="controls"><source type="video/mp4" src="'+$target.attr('rel')+'"><a href="'+$target.attr('rel')+'">'+$target.attr('title')+'</a></video>');
 				}else {
 					this.file.insert('<a href="' + $target.attr('rel') + '">' + $target.attr('title') + '</a>');
 				}
