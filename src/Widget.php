@@ -5,10 +5,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @see https://github.com/vova07/yii2-imperavi-widget
+ * @see https://github.com/venodon/yii2-imperavi-widget
  */
 
-namespace vova07\imperavi;
+namespace venodon\imperavi;
 
 use Yii;
 use yii\base\InvalidConfigException;
@@ -28,15 +28,15 @@ use yii\web\JsExpression;
  *
  * @author Vasile Crudu <bazillio07@yandex.ru>
  *
- * @link https://github.com/vova07/yii2-imperavi-widget
+ * @link https://github.com/venodon/yii2-imperavi-widget
  * @link https://imperavi.com/assets/pdf/redactor-documentation-10.pdf
  *
- * @license https://github.com/vova07/yii2-imperavi-widget/blob/master/LICENSE.md
+ * @license https://github.com/venodon/yii2-imperavi-widget/blob/master/LICENSE.md
  */
 class Widget extends BaseWidget
 {
     /** Name of inline JavaScript package that is registered by the widget */
-    const INLINE_JS_KEY = 'vova07/imperavi/';
+    const INLINE_JS_KEY = 'venodon/imperavi/';
 
     /**
      * @var Model|null The data model that this widget is associated with.
@@ -157,13 +157,13 @@ class Widget extends BaseWidget
      */
     public static function registerTranslations()
     {
-        if (!isset(Yii::$app->i18n->translations['vova07/imperavi']) && !isset(Yii::$app->i18n->translations['vova07/imperavi*'])) {
-            Yii::$app->i18n->translations['vova07/imperavi'] = [
+        if (!isset(Yii::$app->i18n->translations['venodon/imperavi']) && !isset(Yii::$app->i18n->translations['venodon/imperavi*'])) {
+            Yii::$app->i18n->translations['venodon/imperavi'] = [
                 'class' => 'yii\i18n\PhpMessageSource',
-                'basePath' => '@vova07/imperavi/messages',
+                'basePath' => '@venodon/imperavi/messages',
                 'forceTranslation' => true,
                 'fileMap' => [
-                    'vova07/imperavi' => 'imperavi.php',
+                    'venodon/imperavi' => 'imperavi.php',
                 ],
             ];
         }
@@ -193,12 +193,12 @@ class Widget extends BaseWidget
     protected function registerDefaultCallbacks()
     {
         if (isset($this->settings['imageUpload']) && !isset($this->settings['imageUploadErrorCallback'])) {
-            $message = Yii::t('vova07/imperavi', 'ERROR_DURING_UPLOAD_PROCESS');
+            $message = Yii::t('venodon/imperavi', 'ERROR_DURING_UPLOAD_PROCESS');
 
             $this->settings['imageUploadErrorCallback'] = new JsExpression('function (response) { alert("' . $message . '"); }');
         }
         if (isset($this->settings['fileUpload']) && !isset($this->settings['fileUploadErrorCallback'])) {
-            $message = Yii::t('vova07/imperavi', 'ERROR_DURING_UPLOAD_PROCESS');
+            $message = Yii::t('venodon/imperavi', 'ERROR_DURING_UPLOAD_PROCESS');
 
             $this->settings['fileUploadErrorCallback'] = new JsExpression('function (response) { alert("' . $message . '"); }');
         }

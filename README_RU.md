@@ -1,11 +1,11 @@
 # Imperavi Redactor Widget для Yii 2
 
-[![Latest Version](https://img.shields.io/github/release/vova07/yii2-imperavi-widget.svg?style=flat-square)](https://github.com/vova07/yii2-imperavi-widget/releases)
+[![Latest Version](https://img.shields.io/github/release/venodon/yii2-imperavi-widget.svg?style=flat-square)](https://github.com/venodon/yii2-imperavi-widget/releases)
 [![Software License](https://img.shields.io/badge/license-BSD-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/vova07/yii2-imperavi-widget/master.svg?style=flat-square)](https://travis-ci.org/vova07/yii2-imperavi-widget)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/vova07/yii2-imperavi-widget.svg?style=flat-square)](https://scrutinizer-ci.com/g/vova07/yii2-imperavi-widget/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/vova07/yii2-imperavi-widget.svg?style=flat-square)](https://scrutinizer-ci.com/g/vova07/yii2-imperavi-widget)
-[![Total Downloads](https://img.shields.io/packagist/dt/vova07/yii2-imperavi-widget.svg?style=flat-square)](https://packagist.org/packages/vova07/yii2-imperavi-widget)
+[![Build Status](https://img.shields.io/travis/venodon/yii2-imperavi-widget/master.svg?style=flat-square)](https://travis-ci.org/venodon/yii2-imperavi-widget)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/venodon/yii2-imperavi-widget.svg?style=flat-square)](https://scrutinizer-ci.com/g/venodon/yii2-imperavi-widget/code-structure)
+[![Quality Score](https://img.shields.io/scrutinizer/g/venodon/yii2-imperavi-widget.svg?style=flat-square)](https://scrutinizer-ci.com/g/venodon/yii2-imperavi-widget)
+[![Total Downloads](https://img.shields.io/packagist/dt/venodon/yii2-imperavi-widget.svg?style=flat-square)](https://packagist.org/packages/venodon/yii2-imperavi-widget)
 
 `Imperavi Redactor Widget` — обёртка для [Imperavi Redactor 10.2.5](https://imperavi.com/assets/pdf/redactor-documentation-10.pdf),
 довольно неплохого WYSIWYG редактора.
@@ -21,13 +21,13 @@ OpenSource, но так как сообщество Yii купило OEM-лиц�
 Просто запустите в консоли команду:
 
 ```bash
-$ php composer.phar require --prefer-dist vova07/yii2-imperavi-widget "*"
+$ php composer.phar require --prefer-dist venodon/yii2-imperavi-widget "*"
 ```
 
 или добавьте
 
 ```json
-"vova07/yii2-imperavi-widget": "*"
+"venodon/yii2-imperavi-widget": "*"
 ```
 
 в `require` секцию вашего `composer.json` файла.
@@ -40,7 +40,7 @@ $ php composer.phar require --prefer-dist vova07/yii2-imperavi-widget "*"
 ### Как простой виджет
 
 ```php
-echo \vova07\imperavi\Widget::widget([
+echo \venodon\imperavi\Widget::widget([
     'name' => 'redactor',
     'settings' => [
         'lang' => 'ru',
@@ -62,7 +62,7 @@ echo \vova07\imperavi\Widget::widget([
 ### Как виджет ActiveForm
 
 ```php
-use vova07\imperavi\Widget;
+use venodon\imperavi\Widget;
 
 echo $form->field($model, 'content')->widget(Widget::className(), [
     'settings' => [
@@ -85,7 +85,7 @@ echo $form->field($model, 'content')->widget(Widget::className(), [
 ### Как виджет для уже существующего textarea
 
 ```php
-echo \vova07\imperavi\Widget::widget([
+echo \venodon\imperavi\Widget::widget([
     'selector' => '#my-textarea-id',
     'settings' => [
         'lang' => 'ru',
@@ -112,7 +112,7 @@ public function actions()
 {
     return [
         'images-get' => [
-            'class' => 'vova07\imperavi\actions\GetImagesAction',
+            'class' => 'venodon\imperavi\actions\GetImagesAction',
             'url' => 'http://my-site.com/images/', // Directory URL address, where files are stored.
             'path' => '@alias/to/my/path', // Or absolute path to directory where files are stored.
             'options' => ['only' => ['*.jpg', '*.jpeg', '*.png', '*.gif', '*.ico']], // These options are by default.
@@ -121,7 +121,7 @@ public function actions()
 }
 
 // View.php
-echo \vova07\imperavi\Widget::widget([
+echo \venodon\imperavi\Widget::widget([
     'selector' => '#my-textarea-id',
     'settings' => [
         'lang' => 'ru',
@@ -143,7 +143,7 @@ public function actions()
 {
     return [
         'files-get' => [
-            'class' => 'vova07\imperavi\actions\GetFilesAction',
+            'class' => 'venodon\imperavi\actions\GetFilesAction',
             'url' => 'http://my-site.com/files/', // Directory URL address, where files are stored.
             'path' => '@alias/to/my/path', // Or absolute path to directory where files are stored.
             'options' => ['only' => ['*.txt', '*.md']], // These options are by default.
@@ -152,7 +152,7 @@ public function actions()
 }
 
 // View.php
-echo \vova07\imperavi\Widget::widget([
+echo \venodon\imperavi\Widget::widget([
     'selector' => '#my-textarea-id',
     'settings' => [
         'lang' => 'ru',
@@ -174,7 +174,7 @@ public function actions()
 {
     return [
         'image-upload' => [
-            'class' => 'vova07\imperavi\actions\UploadFileAction',
+            'class' => 'venodon\imperavi\actions\UploadFileAction',
             'url' => 'http://my-site.com/images/', // Directory URL address, where files are stored.
             'path' => '@alias/to/my/path', // Or absolute path to directory where files are stored.
         ],
@@ -182,7 +182,7 @@ public function actions()
 }
 
 // View.php
-echo \vova07\imperavi\Widget::widget([
+echo \venodon\imperavi\Widget::widget([
     'selector' => '#my-textarea-id',
     'settings' => [
         'lang' => 'ru',
@@ -203,7 +203,7 @@ public function actions()
 {
     return [
         'file-upload' => [
-            'class' => 'vova07\imperavi\actions\UploadFileAction',
+            'class' => 'venodon\imperavi\actions\UploadFileAction',
             'url' => 'http://my-site.com/files/', // Directory URL address, where files are stored.
             'path' => '@alias/to/my/path', // Or absolute path to directory where files are stored.
             'uploadOnlyImage' => false, // For any kind of files uploading.
@@ -212,7 +212,7 @@ public function actions()
 }
 
 // View.php
-echo \vova07\imperavi\Widget::widget([
+echo \venodon\imperavi\Widget::widget([
     'selector' => '#my-textarea-id',
     'settings' => [
         'lang' => 'ru',
@@ -233,7 +233,7 @@ public function actions()
 {
     return [
         'file-upload' => [
-            'class' => 'vova07\imperavi\actions\UploadFileAction',
+            'class' => 'venodon\imperavi\actions\UploadFileAction',
             'url' => 'http://my-site.com/files/', // Directory URL address, where files are stored.
             'path' => '@alias/to/my/path', // Or absolute path to directory where files are stored.
             'uploadOnlyImage' => false, // For any kind of files uploading.
@@ -244,7 +244,7 @@ public function actions()
 }
 
 // View.php
-echo \vova07\imperavi\Widget::widget([
+echo \venodon\imperavi\Widget::widget([
     'selector' => '#my-textarea-id',
     'settings' => [
         'lang' => 'ru',
@@ -265,7 +265,7 @@ public function actions()
 {
     return [
         'file-upload' => [
-            'class' => 'vova07\imperavi\actions\UploadFileAction',
+            'class' => 'venodon\imperavi\actions\UploadFileAction',
             'url' => 'http://my-site.com/files/', // Directory URL address, where files are stored.
             'path' => '@alias/to/my/path', // Or absolute path to directory where files are stored.
             'uploadOnlyImage' => false, // For any kind of files uploading.
@@ -276,7 +276,7 @@ public function actions()
 }
 
 // View.php
-echo \vova07\imperavi\Widget::widget([
+echo \venodon\imperavi\Widget::widget([
     'selector' => '#my-textarea-id',
     'settings' => [
         'lang' => 'ru',
@@ -292,7 +292,7 @@ echo \vova07\imperavi\Widget::widget([
 ### Регистрация своих плагинов
 
 ```php
-echo \vova07\imperavi\Widget::widget([
+echo \venodon\imperavi\Widget::widget([
     'selector' => '#my-textarea-id',
     'settings' => [
         'lang' => 'ru',
@@ -316,17 +316,17 @@ public function actions()
 {
     return [
         'images-get' => [
-            'class' => 'vova07\imperavi\actions\GetImagesAction',
+            'class' => 'venodon\imperavi\actions\GetImagesAction',
             'url' => 'http://my-site.com/images/', // Directory URL address, where files are stored.
             'path' => '@alias/to/my/path', // Or absolute path to directory where files are stored.
         ],
         'image-upload' => [
-            'class' => 'vova07\imperavi\actions\UploadFileAction',
+            'class' => 'venodon\imperavi\actions\UploadFileAction',
             'url' => 'http://my-site.com/images/', // Directory URL address, where files are stored.
             'path' => '@alias/to/my/path', // Or absolute path to directory where files are stored.
         ],
         'file-delete' => [
-            'class' => 'vova07\imperavi\actions\DeleteFileAction',
+            'class' => 'venodon\imperavi\actions\DeleteFileAction',
             'url' => 'http://my-site.com/statics/', // Directory URL address, where files are stored.
             'path' => '/var/www/my-site.com/web/statics', // Or absolute path to directory where files are stored.
         ],
@@ -334,7 +334,7 @@ public function actions()
 }
 
 // View.php
-echo \vova07\imperavi\Widget::widget([
+echo \venodon\imperavi\Widget::widget([
     'selector' => '#my-textarea-id',
     'settings' => [
         'lang' => 'ru',
@@ -344,7 +344,7 @@ echo \vova07\imperavi\Widget::widget([
         'imageManagerJson' => Url::to(['/default/images-get']),
     ],
     'plugins' => [
-        'imagemanager' => 'vova07\imperavi\bundles\ImageManagerAsset',              
+        'imagemanager' => 'venodon\imperavi\bundles\ImageManagerAsset',              
     ],
 ]);
 ```
@@ -357,18 +357,18 @@ public function actions()
 {
     return [
         'files-get' => [
-            'class' => 'vova07\imperavi\actions\GetFilesAction',
+            'class' => 'venodon\imperavi\actions\GetFilesAction',
             'url' => 'http://my-site.com/images/', // Directory URL address, where files are stored.
             'path' => '@alias/to/my/path', // Or absolute path to directory where files are stored.
         ],
         'file-upload' => [
-            'class' => 'vova07\imperavi\actions\UploadFileAction',
+            'class' => 'venodon\imperavi\actions\UploadFileAction',
             'url' => 'http://my-site.com/files/', // Directory URL address, where files are stored.
             'path' => '@alias/to/my/path', // Or absolute path to directory where files are stored.
             'uploadOnlyImage' => false, // For any kind of files uploading.
         ],
         'file-delete' => [
-            'class' => 'vova07\imperavi\actions\DeleteFileAction',
+            'class' => 'venodon\imperavi\actions\DeleteFileAction',
             'url' => 'http://my-site.com/statics/', // Directory URL address, where files are stored.
             'path' => '/var/www/my-site.com/web/statics', // Or absolute path to directory where files are stored.
         ],
@@ -376,7 +376,7 @@ public function actions()
 }
 
 // View.php
-echo \vova07\imperavi\Widget::widget([
+echo \venodon\imperavi\Widget::widget([
     'selector' => '#my-textarea-id',
     'settings' => [
         'lang' => 'ru',
@@ -386,7 +386,7 @@ echo \vova07\imperavi\Widget::widget([
         'fileManagerJson' => Url::to(['/default/files-get']),
     ],
     'plugins' => [
-        'filemanager' => 'vova07\imperavi\bundles\FileManagerAsset',              
+        'filemanager' => 'venodon\imperavi\bundles\FileManagerAsset',              
     ],
 ]);
 ```
@@ -407,7 +407,7 @@ $ phpunit
 
 ## Авторство
 
-- [Vasile Crudu](https://github.com/vova07)
+- [Vasile Crudu](https://github.com/venodon)
 - [Все участники](../../contributors)
 
 ## Лицензия

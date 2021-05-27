@@ -27,7 +27,7 @@ use yii\web\Response;
  * {
  *     return [
  *         'delete-file' => [
- *             'class' => 'vova07\imperavi\actions\DeleteFileAction',
+ *             'class' => 'venodon\imperavi\actions\DeleteFileAction',
  *             'url' => 'http://my-site.com/statics/',
  *             'path' => '/var/www/my-site.com/web/statics',
  *         ],
@@ -37,7 +37,7 @@ use yii\web\Response;
  *
  * @author Vasile Crudu <bazillio07@yandex.ru>
  *
- * @link https://github.com/vova07/yii2-imperavi-widget
+ * @link https://github.com/venodon/yii2-imperavi-widget
  */
 class DeleteFileAction extends Action
 {

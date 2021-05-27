@@ -5,7 +5,7 @@ The Imperavi Redactor WYSIWYG widget is free software. Every part of this
 project except `assets` directory is released under the terms of the following
 BSD License.
 
-Copyright © 2014-{year} by Crudu Vasile (vova07)
+Copyright © 2014-{year} by Crudu Vasile (venodon)
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,

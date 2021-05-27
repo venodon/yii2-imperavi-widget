@@ -57,7 +57,7 @@ use yii\web\UploadedFile;
  *
  * @author Vasile Crudu <bazillio07@yandex.ru>
  *
- * @link https://github.com/vova07/yii2-imperavi-widget
+ * @link https://github.com/venodon/yii2-imperavi-widget
  */
 class UploadFileAction extends Action
 {
@@ -159,7 +159,7 @@ class UploadFileAction extends Action
 
                 if (file_exists($this->path . $model->file->name) && $this->replace === false) {
                     return [
-                        'error' => Yii::t('vova07/imperavi', 'ERROR_FILE_ALREADY_EXIST'),
+                        'error' => Yii::t('venodon/imperavi', 'ERROR_FILE_ALREADY_EXIST'),
                     ];
                 }
 
@@ -171,7 +171,7 @@ class UploadFileAction extends Action
                     }
                 } else {
                     $result = [
-                        'error' => Yii::t('vova07/imperavi', 'ERROR_CAN_NOT_UPLOAD_FILE'),
+                        'error' => Yii::t('venodon/imperavi', 'ERROR_CAN_NOT_UPLOAD_FILE'),
                     ];
                 }
             }

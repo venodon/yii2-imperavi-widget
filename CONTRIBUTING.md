@@ -2,7 +2,7 @@
 
 Contributions are **welcome** and will be fully **credited**.
 
-We accept contributions via Pull Requests on [Github](https://github.com/vova07/yii2-imperavi-widget).
+We accept contributions via Pull Requests on [Github](https://github.com/venodon/yii2-imperavi-widget).
 
 
 ## Pull Requests

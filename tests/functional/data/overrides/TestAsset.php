@@ -8,7 +8,7 @@
  * @see https://github.com/venodon/yii2-imperavi-widget
  */
 
-namespace vova07\imperavi\tests\functional\data\overrides;
+namespace venodon\imperavi\tests\functional\data\overrides;
 
 use venodon\imperavi\Asset;
 

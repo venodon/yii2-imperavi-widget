@@ -5,10 +5,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @see https://github.com/vova07/yii2-imperavi-widget
+ * @see https://github.com/venodon/yii2-imperavi-widget
  */
 
-namespace vova07\imperavi\tests\functional;
+namespace venodon\imperavi\tests\functional;
 
 use Yii;
 use yii\web\Response;
@@ -16,7 +16,7 @@ use yii\web\Response;
 /**
  * @author Vasile Crudu <bazillio07@yandex.ru>
  *
- * @link https://github.com/vova07/yii2-imperavi-widget
+ * @link https://github.com/venodon/yii2-imperavi-widget
  */
 final class GetFilesActionTest extends TestCase
 {
