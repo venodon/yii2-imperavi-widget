@@ -108,6 +108,8 @@ class UploadFileAction extends Action
      */
     private $_validator = 'image';
 
+    private $ext;
+
     /**
      * @inheritdoc
      */
@@ -164,8 +166,7 @@ class UploadFileAction extends Action
                 }
 
                 if ($model->file->saveAs($this->path . $model->file->name)) {
-                    $result = ['id' => $model->file->name, 'filelink' => $this->url . $model->file->name];
-
+                    $result = ['id' => $model->file->name, 'ext' => $model->file->extension, 'filelink' => $this->url . $model->file->name];
                     if ($this->uploadOnlyImage !== true) {
                         $result['filename'] = $model->file->name;
                     }

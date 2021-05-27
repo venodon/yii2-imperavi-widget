@@ -32,7 +32,7 @@
 						var ul = $('<ul id="redactor-modal-list">');
 						$.each(data, $.proxy(function(key, val)
 						{
-							var a = $('<a href="#" title="' + val.title + '" rel="' + val.link + '" class="redactor-file-manager-link">' + val.title + ' <span style="font-size: 11px; color: #888;">' + val.name + '</span> <span style="position: absolute; right: 10px; font-size: 11px; color: #888;">(' + val.size + ')</span></a>');
+							var a = $('<a href="#" data-ext="'+val.ext+'" title="' + val.title + '" rel="' + val.link + '" class="redactor-file-manager-link">' + val.title + ' <span style="font-size: 11px; color: #888;">' + val.name + '</span> <span style="position: absolute; right: 10px; font-size: 11px; color: #888;">(' + val.size + ')</span></a>');
 							var li = $('<li />');
 
 							a.on('click', $.proxy(this.filemanager.insert, this));
@@ -54,8 +54,12 @@
 				e.preventDefault();
 
 				var $target = $(e.target).closest('.redactor-file-manager-link');
-
-				this.file.insert('<a href="' + $target.attr('rel') + '">' + $target.attr('title') + '</a>');
+				var videoExtensions = ["mp4", "mpv", "avi"];
+				if(videoExtensions.indexOf($target.attr('data-ext')) !== -1) {
+					this.file.insert('<video poster="" controls="controls"><source type="video/mp4" src="'+$target.attr('rel')+'"><a href="'+$target.attr('rel')+'">'+$target.attr('title')+'</a></video>');
+				}else {
+					this.file.insert('<a href="' + $target.attr('rel') + '">' + $target.attr('title') + '</a>');
+				}
 			}
 		};
 	};

@@ -96,6 +96,7 @@ class GetFilesAction extends Action
                 'name' => $file,
                 'link' => $url,
                 'size' => $size,
+                'ext'=> pathinfo($path, PATHINFO_EXTENSION)
             ];
         }
 
