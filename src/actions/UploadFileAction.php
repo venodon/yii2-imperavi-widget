@@ -156,7 +156,7 @@ class UploadFileAction extends Action
                 if ($this->unique === true && $model->file->extension) {
                     $model->file->name = uniqid() . '.' . $model->file->extension;
                 } elseif ($this->translit === true && $model->file->extension) {
-                    $model->file->name = Inflector::slug($model->file->baseName) . '.' . $model->file->extension;
+                    $model->file->name = Inflector::slug($model->file->baseName) . '_' . time() . '.' . $model->file->extension;
                 }
 
                 if (file_exists($this->path . $model->file->name) && $this->replace === false) {
